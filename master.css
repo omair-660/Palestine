@@ -1,0 +1,351 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: sans-serif;
+  background-color: #f7f7f7;
+}
+html{
+  scroll-behavior: smooth;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    background-color: #fff;
+    position: fixed;
+    z-index: 99999;
+    width: 100%;
+}
+nav.shadow{
+ box-shadow: 2px 3px 12px #aaa; 
+  
+}
+ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+#blog{
+  color: red;
+  height: 2px;
+  overflow: hidden;
+  transition: 0.5s;
+  opacity: 0;
+  display: block;
+}
+#blog.openLi{
+  opacity: 2;
+  height: 100%;
+}
+li {
+    margin: 9px;
+    text-transform: uppercase;
+}
+nav a {
+    text-decoration: none;
+    color: #464646;
+    transition: 0.5s;
+    font-weight: 600;
+    font-size: 18px;
+    position: relative;
+    display: flex;
+    align-items: center;
+        margin-left: 8px;
+        justify-content: center;
+}
+  nav a span {
+      border-width: 8px;
+      border-style: solid;
+      border-color: transparent transparent transparent red;
+      display: block;
+      margin-top: -2px;
+      position: absolute;
+      left: 10px;
+      z-index: -8;
+      opacity: 0;
+      transition: 0.5s;
+  }
+  nav a:hover span{
+    opacity: 2;
+    left: -10px;
+    z-index: 9999999;
+  }
+nav a:hover{
+  color: #007a4b;
+}
+nav .logo img{
+  width: 110px;
+  margin-top: 3px;
+}
+.landing {
+    background: #fefaff;
+    padding-top: 129px;
+}
+.landing .contaner {
+    display: flex;
+    align-items: center;
+    padding: 55px 16px;
+    justify-content: space-between;
+}
+.landing .contaner .image img{
+  width: 300px;
+}
+ h5 {
+    color: #2d2d2d;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 9px 0;
+    font-size: 20px;
+}
+.landing .text h3 {
+    text-transform: uppercase;
+    font-size: 37px;
+    padding: 10px 0;
+    letter-spacing: 1px;
+    color: #131313;
+    white-space: nowrap;
+}
+.landing p, .about p {
+    width: 95%;
+    line-height: 1.6;
+    font-size: 17px;
+    color: #a6a6a6;
+}
+ button {
+   border-radius: 2px;
+    margin: 15px 0;
+    padding: 11px 32px;
+    color: #fff;
+    border: none;
+    background: linear-gradient(45deg, #7668ff, #5cccff);
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+ button:hover{
+  box-shadow: 0px 20px 27px -10px #c4a4ff;
+}
+nav .hum {
+    width: 30px;
+    height: 30px;
+    display: none;
+    cursor: pointer;
+}
+nav .hum span {
+    background: black;
+    width: 100%;
+    display: block;
+    height: 2px;
+    margin: 8px 0px;
+    transition: 0.5s;
+}
+.hum.active span:first-child{
+  transform: rotate(228deg);
+  background-color: #007849;
+}
+.hum.active span:nth-child(2){
+  opacity: 0;
+}
+.hum.active span:nth-child(3){
+  transform: rotate(-228deg);
+  margin: -19px 0;
+  background-color: #007849;
+}
+.links.humbrg{
+  transform: translateY(0);
+}
+@media (max-width:767px) {
+  nav a:hover span{
+  left: 37%;
+  }
+  nav .logo img{
+  margin-top: 8px;
+  }
+  nav .hum{
+  display: block;
+  }
+  .landing .contaner {
+  flex-direction: column;
+}
+li {
+  padding: 9px;
+  margin: 0;
+  width: 100%;
+  transition: 0.5s;
+}
+nav li:hover{
+  background: #d3ffd1;
+}
+.landing .text h3 {
+font-size: 30px;
+}
+ul{
+flex-direction: column;
+}
+.links {
+  background: #f6fbff;
+  width: 100%;
+  transform: translateY(-4000%);
+  transition: 0.4s;
+  position: fixed;
+  top: 57px;
+  left: 0;
+  z-index: 9999;
+  padding: 12px 0;
+  text-align: center;
+}
+}
+.about{
+  padding: 55px 16px;
+}
+.about .contaner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.about .image img {
+    width: 301px;
+}
+.about .text p{
+  padding: 12px 0;
+}
+.about .text h3{
+  padding: 12px 0;
+}
+.about .text  {
+    padding-left: 97px;
+}
+@media (max-width:767px){
+  .about .image img {
+    width: 100%;
+}
+  .about .text  {
+      padding-left: 0;
+  }
+.about .contaner {
+  flex-wrap: wrap;
+}
+}
+.servises {
+    padding: 55px 16px;
+}
+.heading{
+text-align: center;
+}
+.heading h2{
+  text-transform:capitalize;
+}
+.heading h2 {
+    text-transform: capitalize;
+    margin-bottom: 12px;
+    font-size: 28px;
+    color: #1a1a1a;
+}
+.heading p{
+line-height: 1.7;
+font-size: 17px;
+  color: #007a4b;
+  padding: 12px 0;
+}
+.servises .contaner {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+  grid-gap: 50px;
+  margin-top: 45px;
+}
+.servises .box {
+  transition: 0.5s;
+  text-align: center;
+  padding: 8px;
+}
+.servises .box h5{
+  font-weight: 600;
+  transition: 0.5s;
+}
+.servises .box:hover h5{
+color: #7f50ff;
+}
+.servises .box:hover{
+  box-shadow: 1px 1px 12px #e5e5e5;
+}
+.servises .box img{
+  width: 64px;
+}
+.servises .box p{
+  line-height: 1.7;
+  font-size: 14px;
+  margin-top: 12px;
+  color: #a6a6a6;
+}
+.history{
+  padding: 55px 16px;
+}
+.history .contaner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.history .image img {
+    width: 301px;
+}
+.history .text p {
+    width: 95%;
+    line-height: 1.6;
+    font-size: 17px;
+    color: #a6a6a6;
+}
+.history .heading p{
+  color: #007a4b;
+}
+@media (max-width:767px){
+.history .contaner{
+  
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+}  
+}
+  .scroll {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 99999999999999;
+    background: #1e1e1e;
+    color: #ffffff;
+    border-radius: 50%;
+    width: 46px;
+    height: 46px;
+    transition: 0.6s;
+    border: 3px solid #fe0007;
+    cursor: pointer;
+    transform: translateX(60px);
+    text-decoration: none;
+}
+.scroll h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 8px;
+    font-size: 29px;
+}
+.scroll:hover {
+    background: #ffffff;
+    color: #1e1e1e;
+    border: 3px solid;
+}
+.scroll.scrr{
+  transform: translateX(0);
+}
+::selection{
+  background-color: green;
+  color:#eee;
+}
