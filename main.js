@@ -1,6 +1,7 @@
 
 let hum = document.getElementById("hum");
 let links = document.getElementById("links");
+let nav = document.getElementById("nav")
 
 hum.onclick = function () {
 
@@ -13,11 +14,11 @@ let scroll = document.querySelector('.scroll');
 window.onscroll = function(){
   if(scrollY >= 300){
     scroll.classList.add('scrr');
-
+nav.classList.add("shadow")
   }
   else {
     scroll.classList.remove('scrr');
-
+nav.classList.remove("shadow")
   }
 }
 let translate = document.getElementById("translate");

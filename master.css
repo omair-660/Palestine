@@ -21,6 +21,9 @@ nav {
     z-index: 99999;
     width: 100%;
 }
+nav.shadow{
+  box-shadow: 1px 2px 11px #aaa;
+}
 ul {
     display: flex;
     align-items: center;
