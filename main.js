@@ -12,13 +12,15 @@ hum.onclick = function () {
 let scroll = document.querySelector('.scroll');
 
 window.onscroll = function(){
-  if(scrollY >= 300){
+  if(scrollY >= 100){
     scroll.classList.add('scrr');
-nav.classList.add("shadow")
+
+nav.classList.add("shadow")
   }
   else {
     scroll.classList.remove('scrr');
-nav.classList.remove("shadow")
+
+nav.classList.remove("shadow")
   }
 }
 let translate = document.getElementById("translate");
