@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body{
-  font-family: sans-serif;
+  font-family:font-family: 'Noto Sans Arabic', sans-serif;
   background-color: #f7f7f7;
   transition: 0.5s;
 }
@@ -448,6 +448,8 @@ color: #7f50ff;
     overflow: hidden;
     transition: 0.5s;
     opacity: 0;
+  letter-spacing: 0;
+  font-size: 22px;
 }
 #ar-0.block{
   opacity: 1;
@@ -708,4 +710,11 @@ transition: 0.5s;
 }
 .error {
     border: 2px solid red;
+}
+.flex{
+display: flex;
+align-items: center;
+}
+.flex img {
+  width:25px;
 }
