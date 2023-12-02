@@ -20,14 +20,16 @@ nav {
     position: fixed;
     z-index: 99999;
     width: 100%;
+    transition: 0.7s;
 }
 nav.shadow{
-  box-shadow: 1px 2px 11px #aaa;
+  box-shadow: 2px 3px 15px #aaa;
 }
 ul {
     display: flex;
     align-items: center;
     list-style: none;
+    animation: load1 2s;
 }
 #blog{
   color: red;
@@ -54,8 +56,8 @@ nav a {
     position: relative;
     display: flex;
     align-items: center;
-        margin-left: 8px;
-        justify-content: center;
+    margin-left: 8px;
+    justify-content: center;
 }
   nav a span {
       border-width: 8px;
@@ -77,6 +79,9 @@ nav a {
 nav a:hover{
   color: #007a4b;
 }
+.logo {
+    animation: load 2s;
+}
 nav .logo img{
   width: 110px;
   margin-top: 3px;
@@ -90,6 +95,14 @@ nav .logo img{
     align-items: center;
     padding: 55px 16px;
     justify-content: space-between;
+    position: relative;
+}
+.landing .contaner .text{
+  animation: load 2s;
+}
+.landing .contaner .image {
+  animation: load1 2s;
+
 }
 .landing .contaner .image img{
   width: 300px;
@@ -127,9 +140,21 @@ nav .logo img{
     cursor: pointer;
     transition: 0.5s;
     border-radius: 2px;
+   position:relative;
+   z-index: 99999;
 }
  button:hover, input[type="submit"]:hover{
   box-shadow: 0px 20px 27px -10px #c4a4ff;
+}
+@keyframes load {
+  0% {
+      transform: translate(-20%, -20%);
+  }
+}
+@keyframes load1 {
+  0% {
+      transform: translate(20%, 20%);
+  }
 }
 nav .hum {
     width: 30px;
@@ -344,8 +369,38 @@ color: #7f50ff;
 .scroll.scrr{
   transform: translateX(0);
 }
+.discover {
+  width:90%;
+    background: aliceblue;
+    border-left: 4px solid #7373ff;
+    padding: 18px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 8888;
+    transform: translate(-3000%, -50%);
+    transition: 0.5s;
+}
+.discover span {
+    color: red;
+    font-size: 23px;
+    font-weight: 700;
+    position: absolute;
+    top: -4px;
+    right: 8px;
+    cursor: pointer;
+}
+.discover.trans{
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width:767px) {
+  .discover{
+    top:20%;
+  }
+}
 .none{
-  width:0;
+  width:0!important;
   height: 0;
   overflow: hidden;
   transition: 0.5s;
@@ -362,7 +417,32 @@ color: #7f50ff;
   width: auto;
   height: auto;
 }
-#ar-0,#ar-1,#ar-2,#ar-3,#ar-4,#ar-5,#ar-6,#ar-7{
+#aboutAr{
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  opacity: 0;
+}
+#aboutAr.block{
+  opacity: 1;
+  width: auto;
+  height: auto;
+}
+#disAr{
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  opacity: 0;
+}
+#disAr.block{
+  opacity: 1;
+  width: auto;
+  height: auto;
+}
+#ar-0,#ar-1,#ar-2,#ar-3,#ar-4,#ar-5,#ar-6,#ar-7,#ara-0,#ara-1,#ara-2,#ara-3
+,#ara-4,#ara-5,#ara-6{
     width: 0;
     height: 0;
     overflow: hidden;
@@ -405,6 +485,46 @@ color: #7f50ff;
   height: auto;
 }
 #ar-7.block{
+  opacity: 1;
+  width: auto;
+  height: auto;
+}
+#ara-0.block{
+  opacity: 1;
+  width: auto;
+  height: auto;
+}
+#ara-0.block{
+  opacity: 1;
+  width: auto;
+  height: auto;
+}
+#ara-1.block{
+  opacity: 1;
+  width: auto;
+  height: auto;
+}
+#ara-2.block{
+  opacity: 1;
+  width: auto;
+  height: auto;
+}
+#ara-3.block{
+  opacity: 1;
+  width: auto;
+  height: auto;
+}
+#ara-4.block{
+  opacity: 1;
+  width: auto;
+  height: auto;
+}
+#ara-5.block{
+  opacity: 1;
+  width: auto;
+  height: auto;
+}
+#ara-6.block{
   opacity: 1;
   width: auto;
   height: auto;
@@ -513,6 +633,7 @@ input[type="submit"] {
     color: #676767;
 }
 .gm {
+    filter: invert(1);
     display: grid;
     width: 100%;
 }
@@ -548,9 +669,11 @@ transition: 0.5s;
 }
 .social .fillter:hover{
   transform: rotate(180deg) translateY(-10px);
+  background: #929d25;
 }
 .wa:hover{
   transform: rotate(180deg) translateY(-10px);
+  background: #7668ff;
 }
 .end a {
     color: #7276ff;
