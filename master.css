@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body{
-  font-family:'Noto Sans Arabic', sans-serif;
+  font-family: 'Noto Sans Arabic', sans-serif;
   background-color: #f7f7f7;
   transition: 0.5s;
 }
@@ -635,7 +635,7 @@ input[type="submit"] {
     color: #676767;
 }
 .gm {
-    filter: invert(1);
+    filter: ;
     display: grid;
     width: 100%;
 }
